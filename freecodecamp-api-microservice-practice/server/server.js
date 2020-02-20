@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const router = require('./routes.js');
+const timeStamp = require('./timestamp.js');
+const shortner = require('./shortner.js');
 
 app.use(bodyParser.json());
 
-app.use('/times', router);
+app.use('/times', timeStamp);
+
+app.use('/shortner', shortner);
 
 module.exports = app;
