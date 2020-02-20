@@ -22,7 +22,7 @@ module.exports = {
      let url = 'http://' + shortUrls[id];
      res.redirect(url);
    } else {
-     res.sendStatus(500);
+     res.status(500).send({error: "not a valid url"});
    }  
  }
 }
