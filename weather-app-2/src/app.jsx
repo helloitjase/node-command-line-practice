@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Stopwatch from './stopwatch.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Stopwatch />
         <div>Weather App</div>
         <div>
           <label>
@@ -50,6 +52,7 @@ class App extends React.Component {
         <div>
           {typeof this.state.weatherInfo === 'string' ? <div>{this.state.weatherInfo}</div> : <div>{this.state.weatherInfo.temp + 'F'}</div>}
         </div>
+        
       </div>
     )
   }
